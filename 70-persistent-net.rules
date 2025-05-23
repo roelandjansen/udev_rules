@@ -9,8 +9,17 @@
 # USB device 0x0456:0xb673 (usb)
 # USB device 0x0456:0xb673 (usb)
 # USB device 0x0456:0xb673 (usb)
-SUBSYSTEM=="net", ACTION=="add", DRIVERS=="rtl8723be", ATTR{dev_id}=="0x0", KERNELS=="0000:09:00.0", ATTR{type}=="1", ATTR{dev_port}=="0", KERNELS=="0000:09:00.0", NAME="wlan0"
-SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="38:63:bb:71:cb:df", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="eth*", NAME="eth0"
-
 # USB device 0x0456:0xb673 (usb)
-SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="00:e0:22:38:bb:4f", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="eth*", NAME="eth1"
+# PCI device 0x8086:0x15d7 (e1000e)
+# PCI device 0x8086:0x24fd (iwlwifi)
+# USB device 0x0bda:0x8153 (usb)
+# USB device 0x0bda:0x8153 (usb)
+# USB device 0x0bda:0x8153 (usb)
+# USB device 0x0bda:0x8153 (usb)
+# USB device 0x0bda:0x8153 (usb)
+# PCI device 0x8086:0x24fd (iwlwifi)
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="38:63:bb:71:cb:df", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="eth*", NAME="eth0"
+#SUBSYSTEM=="net", ACTION=="add", DRIVERS=="rtl8723be", ATTR{dev_id}=="0x0", KERNELS=="0000:09:00.0", ATTR{type}=="1", ATTR{dev_port}=="0", KERNELS=="0000:09:00.0", NAME="wlan0"
+#SUBSYSTEM=="net", ACTION=="add", DRIVERS=="?*", ATTR{address}=="18:1d:ea:85:8d:ec", ATTR{dev_id}=="0x0", ATTR{type}=="1", KERNEL=="wlan*", NAME="wlan0"
+# USB device 0x214b:0x7250 (usb)
+SUBSYSTEM=="net", ACTION=="add", DRIVERS=="xhci_hcd", KERNELS=="0000:00:14.0", KERNEL=="eth*", NAME="eth1"

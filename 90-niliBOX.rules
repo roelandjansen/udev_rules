@@ -1,0 +1,3 @@
+SUBSYSTEM=="sound", MODE="0666",GROUP="audio"
+SUBSYSTEM=="usb", MODE="0666", GROUP="plugdev"
+SUBSYSTEM=="video4linux", MODE="0666", GROUP="video"
